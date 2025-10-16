@@ -48,6 +48,8 @@
 ^https?:\/\/api\.zhihu\.com\/commercial_api\/app_float_layer - reject
 # > 知乎_回答页面相关搜索词@ddgksf2013
 ^https?:\/\/www\.zhihu\.com\/api\/v4\/search\/related_queries\/answer\/ - reject
+# > 知乎_广告请求@ddgksf2013
+^http:\/\/[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+){1,4}(:\d+)?\/v2\/resolv - reject
 # > 知乎_首页左侧图标@ddgksf2013
 ^https?:\/\/api\.zhihu\.com\/root\/window - reject
 # > 知乎_我的页面底部@ddgksf2013
@@ -91,5 +93,5 @@ Zhihu = type=http-response,pattern=^https?:\/\/api\.zhihu\.com\/moments_v3,requi
 Zhihu = type=http-response,pattern=https://api.zhihu.com/search/hot_search,requires-body=1,max-size=0,script-path=https://gist.githubusercontent.com/ddgksf2013/d43179d848586d561dbb968dee93bae8/raw/Zhihu.Adblock.js
 
 [MITM]
-hostname = %APPEND% 118.89.204.198,103.41.167.237,2402:4e00:1200:ed00:0:9089:6dac:96b6,www.zhihu.com,api.zhihu.com,zhuanlan.zhihu.com,appcloud2.zhihu.com,m-cloud.zhihu.com,103.41.167.236,103.41.167.234,103.41.167.235,103.41.167.226
+hostname = %APPEND% 118.89.204.198,103.41.167.237,2402:4e00:1200:ed00:0:9089:6dac:96b6,www.zhihu.com,api.zhihu.com,page-info.zhihu.com,zhuanlan.zhihu.com,appcloud2.zhihu.com,m-cloud.zhihu.com,103.41.167.236,103.41.167.234,103.41.167.235,103.41.167.226
 
